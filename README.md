@@ -18,10 +18,10 @@ Cloudflare JS-challenge** — без headless-браузера не пройти
 go build -o bin/ip-matcher .
 
 # Самый простой случай: подсети Timeweb, пересекающиеся с allow-list
-./bin/ip-matcher --provider timeweb --allow ../selectel-floating_ip-checker/ip/allowed_ips.txt
+./bin/ip-matcher --provider timeweb --allow allowed_ips.txt
 
 # Несколько ASN явно (если хостера нет в пресетах)
-./bin/ip-matcher --asn 9123,210976 --allow ./allowed_ips.txt
+./bin/ip-matcher --asn 9123,210976 --allow allowed_ips.txt
 
 # Все префиксы провайдера, без фильтра
 ./bin/ip-matcher --provider selectel --all
